@@ -13,4 +13,4 @@
 
 
 ### Reflection
-I enjoyed this challenge and I found SQL to be interesting. Though others may disagreeI look at it as a mix between a spreadsheet and basic coding. I found the challenge to be a good introduction to SQL and so far it has been quite easy to grasp. I can't wait to learn more!
+I enjoyed this challenge and I found SQL to be interesting. Though others may disagree I look at it as a mix between a spreadsheet and basic coding. I found the challenge to be a good introduction to SQL and so far it has been quite easy to grasp. I can't wait to learn more!
