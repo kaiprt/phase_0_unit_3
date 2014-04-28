@@ -2,14 +2,16 @@
 
 ## Release 0: Create a dummy database
 <!-- paste your terminal output here -->
-CREATE TABLE users (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  first_name VARCHAR(64) NOT NULL,
-  last_name  VARCHAR(64) NOT NULL,
-  email VARCHAR(128) UNIQUE NOT NULL,
-  created_at DATETIME NOT NULL,
-  updated_at DATETIME NOT NULL
+<code>
+CREATE TABLE users ( <br />
+  id INTEGER PRIMARY KEY AUTOINCREMENT, <br />
+  first_name VARCHAR(64) NOT NULL, <br />
+  last_name  VARCHAR(64) NOT NULL, <br />
+  email VARCHAR(128) UNIQUE NOT NULL, <br />
+  created_at DATETIME NOT NULL, <br />
+  updated_at DATETIME NOT NULL <br />
 );
+</code>
 ## Release 1: Insert Data 
 <!-- paste your terminal output here -->
 sqlite> SELECT * FROM users;
