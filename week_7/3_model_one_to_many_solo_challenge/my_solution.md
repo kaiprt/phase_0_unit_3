@@ -16,11 +16,10 @@ https://github.com/kaiprt/phase_0_unit_3/blob/master/week_7/imgs/solo_challenge.
 
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
-<code>
-<code>SELECT username, tweets FROM profiles WHERE id = '[INSERT_ID]'; </code>
-<code>SELECT username, tweets FROM tweets WHERE id = '[INSERT_ID]' AND WHERE created_at = '4/16/2014'; </code>
-<code>SELECT username, tweets FROM profiles WHERE username = '[]' FROM profiles; </code>
-<code>SELECT id, username FROM tweets WHERE id = '[INSERT_ID]'; </code>
+<code>SELECT username, tweets FROM profiles WHERE id = '[INSERT_ID]'; </code><br />
+<code>SELECT username, tweets FROM tweets WHERE id = '[INSERT_ID]' AND WHERE created_at = '4/16/2014'; </code><br />
+<code>SELECT username, tweets FROM profiles WHERE username = '[]' FROM profiles; </code><br />
+<code>SELECT id, username FROM tweets WHERE id = '[INSERT_ID]'; </code><br />
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
 I felt that this was a hard solo-challenge. I think what confused me the most was the Twitter GUI and how it visually represented data. I had trouble assessing what the data was and required fields for tables and also understanding how they linked together (if it was by one key or many keys). I tried my best on this challenge and hope to get some clarity within the next few days.
