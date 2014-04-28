@@ -49,4 +49,5 @@ I found that the challenge to be straightforward. I enjoy working with SQLite an
 the terminal. I hope to learn more about SQLite in the future. In this challenge I learned how to update and
 manipulate databases and I feel very confident doing so. There was nothing special with my strategy and I 
 believe most individuals will have the same syntax as I. I felt that this challenge increased my comfort 
-while navigating through the shell and using sqlite3. I found nothing tedious in this challenge.
+while navigating through the shell and using sqlite3. However, I a had trouble setting the "nickname" column 
+to NOT NULL. I found nothing tedious in this challenge.

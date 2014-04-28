@@ -1,14 +1,14 @@
 # U3.W7: Modeling a Real-World Database (SOLO CHALLENGE)
 
 ## Release 0: Users Fields
-<!-- Identify the fields Twitter collects data for -->
+<!-- Name, Username, E-mail, tweets, followers, following -->
 
 ## Release 1: Tweet Fields
-<!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
+<!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? Text characters < 140, photo option, location option, hashtags -->
 
 ## Release 2: Explain the relationship
 The relationship between `users` and `tweets` is: 
-<!-- because... -->
+<!-- connected by the username because when you create a tweet it is graphically shown as being connected to the user. A tweet is mearly a text with an option to link a photo and your devices location. Everything is connected through the username -->
 
 ## Release 3: Schema Design
 <!-- Include your image (inline) of your schema -->
@@ -16,5 +16,10 @@ The relationship between `users` and `tweets` is:
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
 
+SELECT username, tweets FROM profiles WHERE id = '[INSERT_ID]';
+SELECT username, tweets FROM tweets WHERE id = '[INSERT_ID]' AND WHERE created_at = '4/16/2014';
+SELECT username, tweets FROM profiles WHERE username = '[]' FROM profiles;
+SELECT id, username FROM tweets WHERE id = '[INSERT_ID]';
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
+I felt that this was a hard solo-challenge. I think what confused me the most was the Twitter GUI and how it visually represented data. I had trouble assessing what the data was and required fields for tables and also understanding how they linked together (if it was by one key or many keys). I tried my best on this challenge and hope to get some clarity within the next few days.
