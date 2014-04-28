@@ -1,6 +1,6 @@
 ## U3.W7: SQLZoo
 
-####I worked on this challenge [by myself].
+####I worked on this challenge by myself.
 
 
 
