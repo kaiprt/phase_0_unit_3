@@ -22,7 +22,6 @@ function Grocery(name, quantity) {
 
 function GroceryList() {
   var incomplete = [];
-  var complete = [];
   this.addGrocery = function (object) {
     incomplete.push(object);
     console.log('Your ' + object.name + ' has been added.');
@@ -62,3 +61,7 @@ list.viewList
 
 
 // 5. Reflection 
+
+// This challenge helped me refresh on how to define functions, define local variables, create, add elements to, access, and iterate over arrays in JavaScript,
+// and create, add properties to, delete properties from, and access values from JavaScript Object literals. I felt OK with this challenge. I need to study more 
+// on JS syntax. I have an issue with my viewList function. I could not get the function to display my array conents.
