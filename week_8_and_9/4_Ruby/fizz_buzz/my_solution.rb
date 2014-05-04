@@ -1,7 +1,7 @@
 # U3.W8-9: 
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 # 2. Pseudocode
 =begin
@@ -13,7 +13,7 @@
 5. and multiples of 15 with "Fizzbuzz"
 =end
 # 3. Initial Solution
-
+=begin
 def super_fizzbuzz(array)
   array.map! { |num| 
     if(num % 15 == 0 )
@@ -28,7 +28,7 @@ def super_fizzbuzz(array)
 }
 return array
 end
-
+=end
 
 
 # 4. Refactored Solution
@@ -58,3 +58,8 @@ assert { super_fizzbuzz([1,2,15]) == [1, 2, "FizzBuzz"] }
 super_fizzbuzz([30, 9, 20, 1]) # => ["FizzBuzz", "Fizz", "Buzz", 1]
 
 # 5. Reflection
+=begin
+I found this challenge to relatively simple. I found the directions clear and had no trouble attempting to solve the challenge.
+I am curious if there is a better way to refactor my code and I will continue to research and refine my solution. I had trouble 
+at first because I set my if/else statement backwards (did % 3 then % 5 etc.) but I caught the error quickly.
+=end

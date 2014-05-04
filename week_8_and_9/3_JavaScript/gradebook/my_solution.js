@@ -57,7 +57,7 @@ var gradebook = {
 // __________________________________________
 // Refactored Solution
 
-
+//I am not sure exactly what I could refactor here. Will update if I find a solution.
 
 
 
@@ -66,7 +66,10 @@ var gradebook = {
 
 // __________________________________________
 // Reflect
-
+// I found this challenge to be a good refresher on JavaScript. I had some trouble at first
+// but this was mainly syntax related. After some quick research I was able to write my solution
+// and pass the tests. I did not find this challenge tedious and I feel more confident creating 
+// functions in JavaScript.
 
 
 

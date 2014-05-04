@@ -37,9 +37,9 @@ Command that updates remote refs and associated objects.
 Command that resets current HEAD to the specified state.
 #### rm
 <!-- Your definition here -->
-
+Command that removes files from working tree and index.
 #### status
-
+Command that shows working tree.
 
 ## Release 3: Git Workflow
 

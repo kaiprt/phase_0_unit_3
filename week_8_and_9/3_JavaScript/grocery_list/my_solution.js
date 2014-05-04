@@ -43,10 +43,7 @@ function GroceryList() {
 
 // 4. Refactored Solution
 
-
-
-
-
+//I am not sure exactly what I could refactor here. Will update if I find a solution.
 
 // 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
 orange = new Grocery("orange", 2);

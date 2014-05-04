@@ -42,3 +42,4 @@ assert { reverse_words("hello") == "olleh" }
 I found this a very simple challenge. It was easy and in return I brushed up on some regular expressions!
 I feel confident with manipulating data in Ruby and found nothing tedious. Regarding my strategy I mainly 
 focused on creating the solution by chaining together methods so I could save space and time.
+=end
