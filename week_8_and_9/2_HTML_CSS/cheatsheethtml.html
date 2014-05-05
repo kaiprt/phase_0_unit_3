@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <!-- <link rel="stylesheet" type="text/css" href="reset.css" /> -->
+    <link rel="stylesheet" type="text/css" href="cheatsheetcss.css" />
+    <title>Ruby Cheatsheet</title>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1>Ruby Cheatsheet</h1>
+      </div>
+      <nav>
+        <div class="nav_item">
+          <h2><a href="#scope">Variable Scope</a></h2>
+        </div>
+        <div class="nav_item">
+          <h2><a href="#data">Data Types</a></h2>
+        </div>
+        <div class="nav_item">
+          <h2><a href="#operators">Operators</a></h2>
+        </div>
+        <div class="nav_item">
+          <h2>Control Expressions</h2>
+        </div>
+        <div class="nav_item">
+          <h2>Classes</h2>
+        </div>
+      </nav>
+    </header>
+    <a name="scope"></a>
+    <section id="scope">
+      <div class="section_title">
+        <h2>Variable Scope</h2>
+      </div>
+      <!-- Removed article 'id' -->
+      <article id="variable_scope">
+        <div class="article_title">
+          <h3>Definition</h3>
+        </div>
+        <div class="article_body">
+          <p>Variable scope defines where in a program a variable is accessible.</p>
+          <table>
+  <!-- Removed table header -->
+            <tr>
+              <!-- Added column width to space out table -->
+              <th width="110px">
+                <h3>Symbol</h3>
+              </th>
+              <th>
+                <h3>Scope</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <!-- Added 'code' tags to identifiers -->
+                <code>$</code>
+              </td>
+              <td>
+                <p>Global Variable</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+               <code>@</code>
+              </td>
+              <td>
+                <p>Instance Variable</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><code>[a-z]</code> or <code>_</code</p>
+              </td>
+              <td>
+                <p>Local Variable</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>[A-Z]</code>
+              </td>
+              <td>
+                <p>Constant</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>@@</code>
+              </td>
+              <td>
+                <p>Class Variable</p>
+              </td>
+            </tr>
+          </table>
+          <p>A useful technique to find out the scope of a variable is to use the defined? method.</p>
+          <code>
+            x = 10</br>
+            => 10</br>
+            defined? x</br>
+            =>"local variable"
+          </code>
+        </div>
+        <div class="article_title">
+          <h3>Scopes: Broken Down</h3>
+        </div>
+        <div class="article_body">
+          <ul>
+            <li>Local Variables- local to the code construct in which they are declared.</li>
+            <li>Global Variables- accessible from anywhere in the Ruby program, regardless of where they are declared.</li>
+            <li>Class Variables- a variable that is shared amongst all instances of a class.</li>
+            <li>Instance Variables- similar to Class variables except that their values are local to specific instances of an object.</li>
+            <li>Constant Scope- values which, once assigned a value, should not be changed.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <a name="data"></a>
+    <section id="data">
+      <div class="section_title">
+        <h2>Data Types</h2>
+      </div>
+      <article id="intro_data">
+        <div class="article_title">
+          <h3>Definition</h3>
+        </div>
+        <div class="article_body">
+          <p>A data type is a set of values, and the allowable operations on those values. Ruby has six data types:</p>
+          <ul>
+            <li>Number</li>
+            <li>String</li>
+            <li>Array</li>
+            <li>Hash</li>
+            <li>Boolean</li>
+            <li>Symbol</li>
+          </ul>
+        </div>
+      </article>
+      <article id="number">
+        <div class="article_title">
+          <h3>Numbers</h3>
+        </div>
+        <div class="article_body">
+          <p>Types of numbers used in the Ruby Programming Language:</p>
+          <ul>
+            <li>123 (Integer)</li>
+            <li>123.45 (Float)</li>
+            <li>1.2e-3 (Scientific Notation)</li>
+            <li>0xffff (Hex)</li>
+            <li>0b01011 (Binary)</li>
+            <li>0377 (Octal)</li>
+          </ul>
+        </div>
+      </article>
+      <article id="string">
+        <div class="article_title">
+          <h3>Strings</h3>
+        </div>
+        <div class="article_body">
+          <p>A string is a data type representing textual data in computer programs. Strings are characters enclosed in double or single quotes.</p>
+          <code>
+            'I'm a string'</br>
+            "Me too!"
+          </code>
+        </div>
+      </article>
+      <article id="array">
+        <div class="article_title">
+          <h3>Arrays</h3>
+        </div>
+        <div class="article_body">
+          <!-- 'p' tags create paragraphs, so you don't need to break
+          line <br/> after closing tag -->
+          <p>An array is an ordered group of objects. To access an element in the array you must call it by it's index (starts at 0).</p>
+          <code>
+            my_array = [1,2,3,4,5] </br>
+            #=> nil</br>
+            my_array[2]</br>
+            #=> 3
+          </code>
+        </div>
+      </article>
+      <article id="hash">
+        <div class="article_title">
+          <h3>Hashes</h3>
+        </div>
+        <div class="article_body">
+          <p>Similar to arrays, hashes store a collection of values in a key and value fashion. Hashes use a value you provide as the key.</p>
+          <code>
+            Hash["FirstName" => "Mark", "LastName" => "Brown", "Status" => "Bacon"]</br>
+            Key = "FirstName", "LastName", "Status"</br>
+            Value = "Mark", "Brown", "Bacon"
+          </code>
+        </div>
+      </article>
+      <article id="boolean">
+        <div class="article_title">
+          <h3>Booleans</h3>
+        </div>
+        <div class="article_body">
+          <p>Boolean values represent yes or no (<code>true/false</code>) and are based off of <em>pure</em> logic.</p>
+          <code>
+            3 == 4 </br>
+            #=> false </br>
+            3 == 3</br>
+            #=> true</br>
+            x = 5; x > 2</br>
+            #=> true
+          </code>
+        </div>
+      </article>
+    </section>
+    <a name="operators"></a>
+    <section id="operators">
+      <div class="section_title">
+        <h2>Operators</h2>
+      </div>
+  <!-- 'id' and 'class' are primarily for CSS useage, so id names must be
+  one worded phrases, ie. arithmetic_operators) -->
+      <article id="arithmetic_op">
+        <div class="article_title">
+          <h3>Arithmetic Operators</h3>
+        </div>
+        <div class="article_body">
+          <table style="table-layout: fixed; width: 535px">
+            <colgroup>
+              <col style="width: 110px">
+              <col style="width: 215px">
+              <col style="width: 200px">
+            </colgroup>
+            <tr>
+              <th>
+                <h3>Operator</h3>
+              </th>
+              <th>
+                <h3>Description</h3>
+              </th>
+              <th>
+                <h3>Example</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <p>+</p>
+              </td>
+              <td>
+                <p>Addition - Adds values on either side of the operator
+                </p>
+              </td>
+              <td>
+                <p>a + b will give 30</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>-</p>
+              </td>
+              <td>
+                <p>Subtraction - Subtracts right hand operand from left hand operand</p>
+              </td>
+              <td>
+                <p>a - b will give -10</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>*</p>
+              </td>
+              <td>
+                <p>Multiplication - Multiplies values on either side of the operator</p>
+              </td>
+              <td>
+                <p>a * b will give 200
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>/</p>
+              </td>
+              <td>
+                <p>Division - Divides left hand operand by right hand operand</p>
+              </td>
+              <td>
+                <p>b / a will give 2</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>%</p>
+              </td>
+              <td>
+                <p>Modulus - Divides left hand operand by right hand operand and returns remainder</p>
+              </td>
+              <td>
+                <p>b % a will give 0</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>**</p>
+              </td>
+              <td>
+                <p>Exponent - Performs exponential (power) calculation on operators</p>
+              </td>
+              <td>
+                <p>a**b will give 10 to the power 20</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </article>
+      <article id="comparison_op">
+        <div class="article_title">
+          <h3>Comparison Operators</h3></div>
+        <div class="article_body">
+          <table style="table-layout: fixed; width: 535px">
+            <colgroup>
+              <col style="width: 110px">
+              <col style="width: 215px">
+              <col style="width: 200px">
+            </colgroup>
+            <tr>
+              <th>
+                <h3>Operator</h3>
+              </th>
+              <th>
+                <h3>Description</h3>
+              </tb>
+              <th>
+                <h3>Example</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <p>==</p>
+              </td>
+              <td>
+                <p>Checks if the value of two operands are equal or not, if yes then condition becomes true.</p>
+              </td>
+             <td>
+              <code>
+                15 == 10<br/>
+                #=> false
+              </code>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <p>=!</p>
+              </td>
+              <td>
+                <p>Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.</p>
+              </td>
+              <td>
+                <code>
+                  15 =! 10<br/>
+                  #=> true
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>></p>
+              </td>
+              <td>
+                <p>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.</p>
+              </td>
+              <td>
+                <code>
+                  4 > 2<br/>
+                  #=> true
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><</p>
+              </td>
+              <td>
+                <p>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</p>
+              </td>
+              <td>
+                <code>
+                  4 < 2<br/>
+                  #=> false
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><=</p>
+              </td>
+              <td>
+                <p>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</p>
+              </td>
+              <td>
+                <code>
+                  4 >= 4<br/>
+                  #=> true
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><=</p>
+              </td>
+              <td>
+                <p>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</p>
+              </td>
+              <td>
+                <code>
+                  2 <= 3<br/>
+                  #=> true
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><=></p>
+              </td>
+              <td>
+                <p>Combined comparison operator. Returns 0 if first operand equals second, 1 if first operand is greater than the second and -1 if first operand is less than the second.</p>
+              </td>
+              <td>
+                <code>
+                  4 <==> 2<br/>
+                  #=> 1
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>===</p>
+              </td>
+              <td>
+                <p>Used to test equality within a when clause of a case statement.</p>
+              </td>
+              <td>
+                <code>
+                  (1...4) === 2<br/>
+                  #=> true
+                </code>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </article>
+      <article id="assignment_op">
+        <div class="article_title">
+          <h3>Assignment Operators</h3>
+        </div>
+        <div class="article_body">
+          <table style="table-layout: fixed; width: 540px">
+            <colgroup>
+              <col style="width: 110px">
+              <col style="width: 215px">
+              <col style="width: 205px">
+            </colgroup>
+            <tr>
+              <th>
+                <h3>Operator</h3>
+              </th>
+              <th>
+                <h3>Description</h3>
+              </th>
+              <th>
+                <h3>Example</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <p>=</p>
+              </td>
+              <td>
+                <p>Simple assignment operator, Assigns values from right side operands to left side operand</p>
+              </td>
+              <td>
+                <p>c = a + b will assigne value of a + b into c</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>+=</p>
+              </td>
+              <td>
+                <p>Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand</p>
+              </td>
+              <td>
+                <p>c += a is equivalent to c = c + a</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>-=</p>
+              </td>
+              <td>
+                <p>Subtract AND assignment operator</p>
+              </td>
+              <td>
+                <p>c -= a is equivalent to c = c - a</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>*=</p>
+              </td>
+              <td>
+                <p>Multiply AND assignment operator</p>
+              </td>
+              <td>
+                <p>c *= a is equivalent to c = c * a</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>/=</p></td>
+              <td>
+                <p>Divide AND assignment operator</p>
+              </td>
+              <td>
+                <p>c /= a is equivalent to c = c / a</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>%=</p>
+              </td>
+              <td>
+                <p>Modulus AND assignment operator</p>
+              </td>
+              <td>
+                <p>c /= a is equivalent to c = c / a</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>**=</p>
+              </td>
+              <td>
+                <p>Exponent AND assignment operator</p>
+              </td>
+              <td>
+                <p>c **= a is equivalent to c = c ** a</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </article>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+    </section>
+    
+    <section id="expressions">
+      <div class="section_title"></div>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>  
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+    </section>
+    
+    <section id="def">
+      <div class="section_title"></div>
+      <article>
+        <div class="article_title"></div>
+        <div class="article_body"></div>
+      </article>
+    </section>
+    
+  </body>
+</html>
+
+<!--
+Outline:
+
+1. Types of Variables/Variable Scope
+  1.1 What is Variable Scope?
+  1.2 Detecting Scope
+  1.3 Local Variables
+  1.4 Global Variables
+  1.5 Class Variables
+  1.6 Instance Variables
+2. Data Types
+  2.1 What are Data Types
+  2.2 Number
+  2.3 String
+  2.4 Array
+  2.5 Hash
+  2.6 Boolean
+3. Operators (list of operators)
+4. Control Expressions
+  4.1 If/else
+  4.2 Unless
+  4.3 Case
+  4.4 Loop
+  4.5 While/do while
+  4.6 Until/ do until
+  4.7 Each (array)
+5. Define Class
+-->
