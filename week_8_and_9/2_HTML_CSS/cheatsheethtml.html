@@ -21,10 +21,10 @@
           <h2><a href="#operators">Operators</a></h2>
         </div>
         <div class="nav_item">
-          <h2>Control Expressions</h2>
+          <h2><a href="#expressions">Control Expressions</a></h2>
         </div>
         <div class="nav_item">
-          <h2>Classes</h2>
+          <h2><a href="#define_class">Classes</a></h2>
         </div>
       </nav>
     </header>
@@ -33,7 +33,6 @@
       <div class="section_title">
         <h2>Variable Scope</h2>
       </div>
-      <!-- Removed article 'id' -->
       <article id="variable_scope">
         <div class="article_title">
           <h3>Definition</h3>
@@ -347,14 +346,14 @@
             </tr>
             <tr>
               <td>
-                <p>=!</p>
+                <p>!=</p>
               </td>
               <td>
                 <p>Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.</p>
               </td>
               <td>
                 <code>
-                  15 =! 10<br/>
+                  15 != 10<br/>
                   #=> true
                 </code>
               </td>
@@ -556,44 +555,106 @@
         <div class="article_body"></div>
       </article>
     </section>
-    
+    <a name="expressions"></a>
     <section id="expressions">
-      <div class="section_title"></div>
+      <div class="section_title">
+        <h2>Control Expressions</h2>
+      </div>
       <article>
-        <div class="article_title"></div>
-        <div class="article_body"></div>
+        <div class="article_title">
+          <h3>if/else</h3>
+        </div>
+        <div class="article_body">
+          <code>
+            if <em>condition</em><br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            else<br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            end
+          </code>
+          <p>Executes code <em>if</em> the <em>condition</em> is true.</p>
+        </div>
       </article>
       <article>
-        <div class="article_title"></div>
-        <div class="article_body"></div>
+        <div class="article_title">
+          <h3>until/do</h3>
+        </div>
+        <div class="article_body">
+          <code>
+            until <em>condition</em> do<br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            end
+          </code>
+          <p>Executes code <em>until</em> the <em>condition</em> is true.</p>
+        </div>
       </article>
       <article>
-        <div class="article_title"></div>
-        <div class="article_body"></div>
+        <div class="article_title">
+          <h3>while/do</h3>
+        </div>
+        <div class="article_body">
+          <code>
+            while <em>condition</em> do<br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            end
+          </code>
+          <p>Executes code <em>while</em> the <em>condition</em> is true.</p>
+        </div>
       </article>
       <article>
-        <div class="article_title"></div>
-        <div class="article_body"></div>
+        <div class="article_title">
+          <h3>each</h3>
+        </div>
+        <div class="article_body">
+          <code>
+            <em>expression</em>.each do |<em>variable</em>|<br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            end
+        </div>
+        <p>Executes code for <em>each</em> <em>variable</em> from a sequence or an array.</p>
       </article>  
       <article>
-        <div class="article_title"></div>
-        <div class="article_body"></div>
+        <div class="article_title">
+          <h3>unless</h3>
+        </div>
+        <div class="article_body">
+          <code>
+            unless <em>condition</em><br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            else<br/>
+            <span style="color: #FFF">__</span><em>code</em><br/>
+            end
+          </code>
+          <p>Executes code <em>unless</em> the <em>condition</em> is true.</p>
+        </div>
       </article>
     </section>
-    
+    <a name="define_class"></a>
     <section id="def">
-      <div class="section_title"></div>
+      <div class="section_title">
+        <h2>Ruby Classes</h2>
+      </div>
       <article>
-        <div class="article_title"></div>
-        <div class="article_body"></div>
+        <div class="article_title">
+          <h3>Definition</h3>
+        </div>
+        <div class="article_body">
+          <p>Because Ruby is an object-oriented programming language, defining a Ruby class essentially creates a manual for how a particular object operates. Dogs bark, cars drive, and planes fly - all of these are perfect examples of how Ruby classes operate. Each method created within the class guides what the object does (ie. bark, drive, fly).</p>
+        </div>
       </article>
     </section>
     
   </body>
 </html>
 
-<!--
-Outline:
+
+
+
+<!-- CSS -->
+
+
+
+<!-- Outline:
 
 1. Types of Variables/Variable Scope
   1.1 What is Variable Scope?
